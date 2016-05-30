@@ -138,7 +138,7 @@ module.exports = (robot) ->
 
       (ctx, cb) ->
         {reviewer, issue} = ctx
-        msg.reply "#{reviewer.login} has been assigned for #{issue.html_url} as a reviewer"
+        msg.send "#{reviewer.login} さんPRが来ました！ レビューお願いしま〜す！ \n #{issue.html_url}"
         if ghWithAvatar
           url = reviewer.avatar_url
           url = "#{url}t=#{Date.now()}" # cache buster
